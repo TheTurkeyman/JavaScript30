@@ -80,7 +80,8 @@ inventors.sort((a,b) => {(a.passed - a.year) - (b.passed - b.year)});
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
     const SummedData = data.reduce((a,b) => {
-    if (a[b] == 0) {a[b] = 0;}
+    if(!a[b])
+    {a[b]=0};
     a[b]++;
     return a;});
 
