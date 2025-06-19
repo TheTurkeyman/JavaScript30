@@ -57,6 +57,12 @@ return a + age;}, 0);
 inventors.sort((a,b) => {(a.passed - a.year) - (b.passed - b.year)});
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+
+    const category = document.querrySelector(`mw-category`);
+    const link = Array.from(category.querrySelectorAll(`a`));
+
+    let result = link.map(link => link.textContent)
+    .filter(de => de.includes("de"));
     
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
